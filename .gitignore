@@ -1,0 +1,16 @@
+# Python környezet és cache
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Nagy méretű AI adatok és hangfájlok (ezek helyben generálódnak)
+whisper_lora_magyar/
+tanito_adatok/
+temp_szeletek/
+*.wav
+
+# Operációs rendszer fájlok
+.DS_Store
+Thumbs.db
