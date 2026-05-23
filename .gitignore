@@ -1,17 +1,22 @@
-# Python környezet és cache
+# Python gyorsítótárak
 __pycache__/
-*.pyc
-venv/
-.venv/
-env/
+*.py[cod]
+*$py.class
 
-# Nagy méretű AI adatok és hangfájlok (ezek helyben generálódnak)
-whisper_lora_magyar/
+# Voicetex lokális adatbázisok és hangok (NE menjenek a GitHubra)
 tanito_adatok/
 temp_szeletek/
-*.wav
+voicetex_backups/
 
-# Operációs rendszer fájlok
-.DS_Store
-Thumbs.db
-mp3 text
+# A letöltött neurális hálózatok és helyi LoRA adapterek
+whisper_lora_magyar/
+huggingface_cache/
+models/
+
+# Virtuális környezet (ha használsz)
+venv/
+.venv/
+
+# Hangfájlok kizárása a mappából
+mp3 text/*.wav
+mp3 text/*.mp3
