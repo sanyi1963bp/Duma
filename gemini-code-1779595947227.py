@@ -1,3 +1,11 @@
+# ==============================================================================
+# 💾 AJÁNLOTT FÁJLNÉV: voicetex_main.py
+# 📂 HOVA MENTSD: H:\________________2026 FEjlesztesek\Voictex Gemini\Duma\
+# 📝 LEÍRÁS: Voicetex Gemini Factory Ultra - Dark Mode Edition
+#             Whisper-Large-V3 LoRA kompatibilitással, HUD-dal és Kötegelt Tanítással.
+#             Alapértelmezett hangbemenet: 1-es eszköz (Fixálva az idegeskedés ellen!)
+# ==============================================================================
+
 import os
 import sys
 import time
@@ -570,8 +578,11 @@ class VoicetexApp:
                     nev = f"{i}: {dev['name']} ({int(dev['max_input_channels'])} ch)"
                     bemeneti_nevek.append(nev)
                     self.minden_eszkoz_lista.append(i)
-                    if "96" in dev['name'].lower() or "audiobox" in dev['name'].lower() or "usb" in dev['name'].lower():
+                    
+                    # MODOSÍTÁS: Automatikusan a hardveres 1-es ID-jú eszközt állítjuk be alapértelmezettnek
+                    if i == 1:
                         preferalt_index = szamlalo
+                        
                     szamlalo += 1
             if bemeneti_nevek:
                 self.device_combo.config(values=bemeneti_nevek)
